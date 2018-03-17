@@ -22,6 +22,16 @@ class CreatePedidosTable extends Migration
             $table->integer('status');
             $table->timestamps();
         });
+
+        Schema::create('pedidos_meta', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_pedido');
+            $table->string('model');
+            $table->string('size');
+            $table->string('color');
+            $table->integer('quantity');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -32,5 +42,6 @@ class CreatePedidosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('pedidos');
+        Schema::dropIfExists('pedidos_meta');
     }
 }

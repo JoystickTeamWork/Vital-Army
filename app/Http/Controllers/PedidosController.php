@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pedido;
 use Illuminate\Http\Request;
 
 class PedidosController extends Controller
@@ -17,14 +18,27 @@ class PedidosController extends Controller
 		* @access public
 		*
 		**/
-		public function ver()
+
+		public function todos()
 		{
 
+			$pedidos = Pedido::all();
 
-			$data = 'Hola mundo!';
 
-			return $data;
+			return view('pedidos.index')->with('pedidos', $pedidos);
 
 
 		}
+
+		/**
+		*
+		* Agrega un registro a la base de datos
+		* @access public
+		*
+		*/
+		public function add(Request $request)
+		{
+			dd($request);
+		}
+
 }
