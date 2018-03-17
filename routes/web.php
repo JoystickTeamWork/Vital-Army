@@ -15,6 +15,6 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/yoshias' , function() {
-	return view('yoshia');
-});
+Route::get('/pedidos' , [
+	'uses' => 'PedidosController@ver',
+]);

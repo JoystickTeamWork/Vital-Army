@@ -22,3 +22,24 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+
+
+$factory->define(App\Pedido::class , function(Faker\Generator $faker) {
+	return [
+		'number' => $faker->unique()->numberBetween(000000, 999999),
+		'payment_method' => $faker->creditCardType,
+		'payment_id' => $faker->unique()->numberBetween(000000, 999999),
+		'total' => $faker->randomFloat(2 , 10 , 9999),
+		'status' => $faker->randomElement($array = array (1, 2, 3, 4, 5)),
+	];
+});
+
+
+
+
+
+
+
+
