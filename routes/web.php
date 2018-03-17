@@ -15,6 +15,6 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/yoshia' , function() {
+Route::get('/yoshias' , function() {
 	return view('yoshia');
 });
