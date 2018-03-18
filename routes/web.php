@@ -31,7 +31,10 @@ Route::get('/', function () {
 
 Route::get('/pedidos', [
 	'uses' => 'PedidosController@todos',
+	'as' => 'pedidos',
 ]);
+
+
 
 
 /*
@@ -41,17 +44,35 @@ Route::get('/pedidos', [
 */
 
 Route::get('/pedidos/ver/{id}', [
-	'uses' => 'PedidosController@ver'
+	'uses' => 'PedidosController@ver',
+	'as' => 'pedidos.ver',
 ]);
+
+
+
 
 /*
 /
-/ Agregar un registro de pedido
+/ Ver formulario para agregar un registro de pedido
 /
 */
 
-Route::post('/pedidos/add', [
-	'uses' => 'PedidosController@add',
-	'as' => 'pedidos.add',
+Route::get('/pedidos/agregar', [
+	'uses' => 'PedidosController@agregar',
+	'as' => 'pedidos.agregar',
+]);
+
+
+
+
+/*
+/
+/ Procesar formulario y agregar un registro de pedido
+/
+*/
+
+Route::post('/pedidos/insert', [
+	'uses' => 'PedidosController@insert',
+	'as' => 'pedidos.insert',
 ]);
 

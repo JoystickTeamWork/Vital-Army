@@ -32,13 +32,39 @@ class PedidosController extends Controller
 
 		/**
 		*
-		* Agrega un registro a la base de datos
+		* Vista de formulario para agregar un pedido
+		*
+		* @access public
+		*
+		**/
+
+		public function agregar()
+		{
+
+			return view('pedidos.agregar');
+			
+		}
+
+		/**
+		*
+		* Procesar información de formulario y agregar un registro a la base de datos
 		* @access public
 		*
 		*/
-		public function add(Request $request)
+
+		public function insert(Request $request)
 		{
-			dd($request);
+
+			$pedido = new Pedido;
+			$pedido->number = rand(111111, 999999);
+			$pedido->buyer = $request->buyer;
+			$pedido->payment_method = $request->payment_method;
+			$pedido->payment_id = $request->payment_id;
+			$pedido->carrier = $request->carrier;
+			$pedido->carrier_guide = $request->carrier_guide;
+			$pedido->total = $request->total;
+			$pedido->status = $request->status;
+			return ($pedido->save()) ? redirect()->route('pedidos') : back()->withInput();
 		}
 
 }

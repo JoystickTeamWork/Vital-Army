@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Vital Army</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-	
-<!-- Contenido principal -->
+@extends('layouts.basic')
+
+@section('contenido')
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Hello, world!</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <p><a class="btn btn-primary btn-lg" href="{{route('pedidos.agregar')}}" role="button">Agregar pedido &raquo;</a></p>
+  </div>
+</div>
 
 <div class="container">
 	<div class="row">
@@ -39,9 +40,9 @@
 							<td>{{'$'.number_format($pedido->total, 2 , "." , ",")}}</td>
 							<td>{{$pedido->created_at}}</td>
 							<td>
-								<button class="btn btn-sm btn-primary">Ver</button>
-								<button class="btn btn-sm btn-success">Actualizar</button>
-								<button class="btn btn-sm btn-danger">Eliminar</button>
+								<a class="btn btn-sm btn-primary" href="{{route('pedidos.ver' , ['id' => $pedido->id])}}">Ver</a>
+								<a class="btn btn-sm btn-success text-white" href="{{route('pedidos.ver' , ['id' => $pedido->id])}}">Actualizar</a>
+								<a class="btn btn-sm btn-danger text-white" href="{{route('pedidos.ver' , ['id' => $pedido->id])}}">Eliminar</a>
 							</td>
 						</tr>
 					@endforeach
@@ -50,7 +51,5 @@
 		</div>
 	</div>
 </div>
+@stop
 
-
-</body>
-</html>

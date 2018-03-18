@@ -16,9 +16,12 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('number')->unique();
+            $table->string('buyer');
             $table->string('payment_method');
             $table->integer('payment_id')->unique();
             $table->float('total');
+            $table->string('carrier')->default('No definido');
+            $table->integer('carrier_guide');
             $table->integer('status');
             $table->timestamps();
         });
@@ -30,6 +33,7 @@ class CreatePedidosTable extends Migration
             $table->string('size');
             $table->string('color');
             $table->integer('quantity');
+            $table->float('price');
             $table->timestamps();
         });
     }
