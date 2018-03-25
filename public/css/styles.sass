@@ -1,2 +1,1162 @@
-body
-	background-color: red
+// Vital Army
+// Date: 2017, 2 Dec
+// Version: 1.0.1
+$dark: #ff5722
+$vital: #f77f00
+$outline: lighten($vital, 5)
+$black: #313437
+$text: #7D8285
+$error: #e74c3c
+$success: #39b54a
+$warning: #e67e22
+$mercado : #07a9f1
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//---------------------Colores para playeras
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+$t-blanco: #fff
+$t-negro: #111
+$t-rojo: #e21922
+$t-azul: #0c56a2
+$t-verde: #013826
+$t-naranja: #f15b24
+$t-turquesa: #009ec9
+$t-mango: #fdbd1a
+$t-lima: #71d73f
+$t-gris: #68686a
+$t-morado: #2a2769
+$t-marron: #795456
+$t-rosa: #fcd9dc
+$t-default: #ebebeb
+
+// Estados de pedidos
+.es-entregado
+	background-color: #12bc00
+	color: white
+	padding: 3px 8px
+	border-radius: 3px
+.es-en-camino
+	background-color: #3483fa
+	color: white
+	padding: 3px 8px
+	border-radius: 3px
+.es-aprobado
+	background-color: #ebebeb
+	color: $text
+	padding: 3px 8px
+	border-radius: 3px
+.es-pendiente
+	background-color: $vital
+	color: white
+	padding: 3px 8px
+	border-radius: 3px
+.es-cancelado
+	background-color: $error
+	color: white
+	padding: 3px 8px
+	border-radius: 3px
+
+//--------------------
+
+.t-blanco
+	background-color: $t-blanco !important
+.t-negro
+	background-color: $t-negro !important
+.t-rojo
+	background-color: $t-rojo !important
+.t-azul
+	background-color: $t-azul !important
+.t-verde
+	background-color: $t-verde !important
+.t-naranja
+	background-color: $t-naranja !important
+.t-turquesa
+	background-color: $t-turquesa !important
+.t-mango
+	background-color: $t-mango !important
+.t-lima
+	background-color: $t-lima !important
+.t-gris
+	background-color: $t-gris !important
+.t-morado
+	background-color: $t-morado !important
+.t-marron
+	background-color: $t-marron !important
+.t-rosa
+	background-color: $t-rosa !important
+.t-default
+	background-color: $t-default !important
+.t-coral
+	background-color: #f48580 !important
+.t-chocolate
+	background-color: #4d2b12 !important
+.t-arena
+	background-color: #f7ebce !important
+.t-fucsia
+	background-color: #d2158a !important
+.t-canario
+	background-color: #fce31b !important
+
+//***********************************************************************
+//***********************************************************************
+// General Styles
+//***********************************************************************
+//***********************************************************************
+
+h1, h2, h3, h4, h5, h6
+	color: $black
+p
+	color: $text
+
+.center
+	text-align: center
+	margin: 0px auto
+
+.tFast
+	-webkit-transition: all 0.3s ease-in-out
+	-o-transition: all 0.3s ease-in-out
+	transition: all 0.3s ease-in-out
+.t100ms
+	-webkit-transition: all 100ms ease-in-out
+	-o-transition: all 100ms ease-in-out
+	transition: all 100ms ease-in-out
+.t200ms
+	-webkit-transition: all 200ms ease-in-out
+	-o-transition: all 200ms ease-in-out
+	transition: all 200ms ease-in-out
+
+.card
+	border-radius: 4px
+	//box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(63, 63, 68, 0.1)
+	background-color: white
+	margin: 15px 0px
+
+.card-header
+	padding: 15px 15px 0px
+	h1
+		margin-bottom: 0px
+	h3
+		font-size: 18px
+.card-img
+	position: relative
+	overflow: hidden
+	img
+		@extend .tFast
+		width: 100%
+		max-width: 100%
+		object-fit: cover
+
+.card-content
+	p
+		margin: 0px
+	h1
+		margin-bottom: 0px
+	h2, h3, h4
+		margin-bottom: 0px
+		font-size: 18px
+	padding: 15px
+	ul
+		li
+			font-size: 14px
+			font-family: "Open Sans",sans-serif
+			font-weight: 400 !important
+
+.card-footer
+	padding: 15px 15px 15px 15px
+	a, p, i, strong
+		font-size: 14px
+	a
+		font-weight: bold
+		color: $vital
+		&:hover
+			text-decoration: underline
+.x2
+	font-size: 20px !important
+
+.page-item.active
+	.page-link
+		background-color: $vital
+		border: 1px solid $vital
+.page-item
+	.page-link
+		color: $vital
+.alert-sharp
+	border-radius: 0px !important
+.vital
+	background-color: $vital !important
+	color: white !important
+.success
+	background-color: $success !important
+	color: white !important
+.error
+	background-color: $error !important
+	color: white !important
+.mercado
+	background-color: $mercado !important
+	color: white !important
+.vital, .success, .error, .azul, .mercado
+	a
+		text-decoration: underline
+		color: white
+		&:hover
+			opacity: .8
+	button
+		margin-top: -4
+		span
+			color: white
+
+.azul
+	background-color: $t-turquesa !important
+	color: white !important
+
+.sombra
+	-webkit-box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+	box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+//***********************************************************************
+//***********************************************************************
+// Login form & Register form
+//***********************************************************************
+//***********************************************************************
+.login-clean, .register-photo
+	h2
+		font-size: 24px !important
+	button
+		background-color: $vital !important
+		cursor: pointer
+		&:hover
+			background-color: $outline !important
+.register-photo
+	padding: 150px 0px !important
+.illustration
+	i
+		color: $vital
+
+
+//***********************************************************************
+//***********************************************************************
+// 404 Pages
+//***********************************************************************
+//***********************************************************************
+.shame-container
+	padding: 50px 0px
+	height: 100%
+	margin: 0px
+	h1
+		font-size: 150px
+	h2
+		font-size: 50px
+
+.shame-face
+	width: 100%
+	height: 500px
+	background-image: url("../images/shame-face.png")
+	background-size: 80%
+	background-repeat: no-repeat
+	background-position: center center
+
+
+//***********************************************************************
+//***********************************************************************
+// Usuario Profile
+//***********************************************************************
+//***********************************************************************
+.profile-container
+	width: 100%
+	height: 1000px
+	background: -webkit-linear-gradient(top, $vital 0%, $dark 100%) 
+	background: linear-gradient(top, $vital 0%, $dark 100%) 
+	position: relative
+.profile-card
+	background-color: $vital
+	width: 56px
+	height: 56px
+	position: absolute
+	left: 50%
+	top: 50%
+	z-index: 2
+	overflow: hidden
+	opacity: 0
+	margin-top: 70px
+	-webkit-transform: translate(-50% , -50%)
+	-ms-transform: translate(-50% , -50%)
+	-o-transform: translate(-50% , -50%)
+	transform: translate(-50% , -50%)
+	border-radius: 50%
+	-webkit-box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+	box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+	-webkit-animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards 
+	animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards 
+	header
+		width: 100%
+		height: auto 
+		padding: 40px 20px 30px 20px 
+		display: block 
+		float: left 
+		background: #FFFFFF 
+		color: #000000 
+		margin-top: 50px 
+		opacity: 0 
+		text-align: center 
+		-webkit-animation: moveIn 1s 3.1s ease forwards 
+		animation: moveIn 1s 3.1s ease forwards 
+		h1
+			color: $vital
+			margin: 0px
+			font-size: 1.8em
+		h2
+			margin: 0px
+			font-size: 1.2em
+		a
+			display: inline-block
+			text-align: center
+			position: relative
+			margin: 25px 30px
+			&:after
+				position: absolute 
+				content: "" 
+				bottom: 3px 
+				right: 3px 
+				width: 20px 
+				height: 20px 
+				border: 4px solid #FFFFFF 
+				-webkit-transform: scale(0) 
+				transform: scale(0) 
+				background: -webkit-linear-gradient(top, $vital 0%, $vital 50%, lighten($vital, 15) 50%, lighten($vital, 15) 100%) 
+				background: linear-gradient($vital 0%, $vital 50%, lighten($vital, 15) 50%, lighten($vital, 15) 100%) 
+				-webkit-border-radius: 50% 
+				border-radius: 50% 
+				-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) 
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) 
+				-webkit-animation: scaleIn 0.3s 3.5s ease forwards 
+				animation: scaleIn 0.3s 3.5s ease forwards 
+			img
+				width: 120px 
+				max-width: 100% 
+				-webkit-border-radius: 50% 
+				border-radius: 50% 
+				-webkit-transition: -webkit-box-shadow 0.3s ease 
+				transition: box-shadow 0.3s ease 
+				-webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06) 
+				box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06) 	
+			&:hover
+				img
+					-webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1) 
+					box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1) 
+	.profile-bio
+		width: 100%
+		display: inline-block 
+		padding: 20px
+		background: #FFFFFF 
+		color: #333333 
+		margin: 0px auto
+		opacity: 0 
+		-webkit-animation: moveIn 1s 3.1s ease forwards 
+		animation: moveIn 1s 3.1s ease forwards 
+		p
+			text-align: center
+		table
+			margin: 0px auto
+		.profile-bio-actions
+			th
+				text-align: center
+				a
+					color: $text
+					font-size: 14px
+					font-weight: normal
+				&:hover
+					background-color: $vital
+					a
+						color: white
+						text-decoration: none
+	.profile-social-links
+		width: 100%
+		display: inline-block 
+		margin: 0px 
+		padding: 15px 
+		margin-top: 50px 
+		text-align: center
+		opacity: 0 
+		-webkit-box-sizing: border-box 
+		box-sizing: border-box 
+		-webkit-animation: moveIn 1s 3.1s ease forwards 
+		animation: moveIn 1s 3.1s ease forwards 
+		li
+			list-style: none 
+			padding: 10px 13px 
+			text-align: center 
+			display: inline-block
+			a
+				display: inline-block 
+				color: $black 
+				position: relative 
+				-webkit-border-radius: 50% 
+				@extend .tFast 
+				i
+					position: relative
+					font-size: 1.4em
+					z-index: 1
+				img , svg
+					width: 24px
+			&:hover
+				a
+					color: $vital
+
+
+@-webkit-keyframes init
+	0%
+		width: 0px 
+		height: 0px 
+	100% 
+		width: 56px 
+		height: 56px 
+		margin-top: 500px 
+		opacity: 1 
+
+@keyframes init
+	0% 
+		width: 0px 
+		height: 0px 
+	100% 
+		width: 56px 
+		height: 56px 
+		margin-top: 500px 
+		opacity: 1 
+  
+
+@-webkit-keyframes puff 
+	0% 
+		top: 100% 
+		height: 0px 
+		padding: 0px 
+	
+	100% 
+		top: 50% 
+		height: 100% 
+		padding: 0px 100% 
+
+@keyframes puff 
+	0% 
+		top: 100% 
+		height: 0px 
+		padding: 0px 
+	100% 
+		top: 50% 
+		height: 100% 
+		padding: 0px 100% 
+	
+@-webkit-keyframes borderRadius 
+	0% 
+		-webkit-border-radius: 50% 
+	100% 
+		-webkit-border-radius: 0px 
+
+@keyframes borderRadius 
+	0% 
+		-webkit-border-radius: 50% 
+	100% 
+		border-radius: 0px 
+
+@-webkit-keyframes moveDown 
+	0% 
+		top: 50% 
+
+	50% 
+		top: 40% 
+
+	100% 
+		top: 100% 
+
+
+
+@keyframes moveDown 
+	0% 
+		top: 50% 
+
+	50% 
+		top: 40% 
+
+	100% 
+		top: 100% 
+
+
+
+@-webkit-keyframes moveUp 
+	0%
+		background: #FFB300 
+		top: 100% 
+
+	50% 
+		top: 40% 
+
+	100% 
+		top: 50% 
+		background: #E0E0E0 
+
+
+
+@keyframes moveUp 
+	0% 
+		background: #FFB300 
+		top: 100% 
+
+	50% 
+		top: 40% 
+
+	100% 
+		top: 50% 
+		background: #E0E0E0 
+
+
+
+@-webkit-keyframes materia 
+	0% 
+		background: #E0E0E0 
+
+	50% 
+		-webkit-border-radius: 4px 
+
+	100% 
+		width: 440px 
+		height: 500px 
+		background: #FFFFFF 
+		-webkit-border-radius: 4px 
+
+
+@keyframes materia 
+	0% 
+		background: #E0E0E0 
+
+	50% 
+		border-radius: 4px 
+
+	100% 
+		width: 100% 
+		height: auto 
+		background: #FFFFFF 
+		border-radius: 4px 
+
+
+
+@-webkit-keyframes moveIn 
+	0% 
+		margin-top: 50px 
+		opacity: 0 
+
+	100% 
+		opacity: 1 
+		margin-top: -20px 
+
+
+
+@keyframes moveIn 
+	0% 
+		margin-top: 50px 
+		opacity: 0 
+
+	100% 
+		opacity: 1 
+		margin-top: -20px 
+
+
+
+@-webkit-keyframes scaleIn 
+	0% 
+		-webkit-transform: scale(0) 
+
+	100% 
+		-webkit-transform: scale(1) 
+
+
+
+@keyframes scaleIn 
+	0% 
+		transform: scale(0) 
+
+	100% 
+		transform: scale(1) 
+
+
+
+@-webkit-keyframes ripple 
+	0% 
+		transform: scale3d(0, 0, 0) 
+	50%,
+	100% 
+		-webkit-transform: scale3d(1, 1, 1) 
+	100% 
+		opacity: 0 
+
+@keyframes ripple 
+	0% 
+		transform: scale3d(0, 0, 0) 
+	50%, 100% 
+		transform: scale3d(1, 1, 1) 
+	100% 
+		opacity: 0 
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//--------------------- PRODUCTOS Y PRODUCTO
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+//***********************************************************************
+//***********************************************************************
+// ADMIN ESTILOS: 
+//***********************************************************************
+//***********************************************************************
+
+//Cartas de administración
+.adminCard
+	width: 100%
+	padding: 15px
+	border-radius: 5px
+	@extend .sombra;
+	h3, p, a
+		color: white
+		margin: 0px
+	h3
+		font-size: 20px
+	p
+		font-size: 40px
+		font-weight: bold
+
+//Tablas de admnistración
+.table-admin
+	thead, tbody
+		tr
+			td, th
+				text-overflow: ellipsis
+				text-overflow-multiline: ellipsis
+				overflow: hidden
+				white-space: nowrap
+.admin-imagen-responsiva
+	width: 35px !important
+	border-radius: 50%
+	overflow: hidden
+	text-align: center
+	border: 1px solid $text
+	margin: 0px 10px !important
+
+.contenedorEdicion
+	margin: 30px 0px
+	padding: 50px 0px
+	border: 1px solid lighten($text, 35)
+	border-radius: 5px
+	position: relative
+	display: none
+
+.contenidoDinamicoCerrar
+	position: absolute
+	right: 15px
+	top: 15px
+	font-size: 22px
+	color: $text
+	cursor: pointer
+
+@media (max-width: 991px)
+	.table-admin
+		border: none
+		display: block
+		thead, tbody, tr, th, td
+			display: block
+			width: 100%
+		thead tr
+			display: none
+		tr
+			border: 1px solid lighten($text, 35)
+			margin-bottom: 20px
+			border-radius: 3px
+			td
+				text-overflow: ellipsis
+				text-overflow-multiline: ellipsis
+				white-space: nowrap
+				overflow: hidden
+				overflow-x: auto
+				position: relative
+				input
+					margin-top: 10px
+				&:before
+					position: absolute
+					top: 1px
+					left: 10px
+					font-size: 10px
+					font-weight: normal
+					opacity: 0.6
+					white-space: nowrap
+	.productos
+		td
+			&:nth-of-type(1):before
+				content: "SKU"
+			&:nth-of-type(2):before
+				content: "Nombre"
+			&:nth-of-type(4):before
+				content: "Precio menudeo"
+			&:nth-of-type(5):before
+				content: "En inventario"
+			&:nth-of-type(6):before
+				content: "Proveedor"
+			&:nth-of-type(7):before
+				content: "Material"
+	.usuarios
+		td
+			&:nth-of-type(1):before
+				content: "Usuario"
+			&:nth-of-type(2):before
+				content: "Nombre"
+			&:nth-of-type(3):before
+				content: "E-mail"
+			&:nth-of-type(4):before
+				content: "Teléfono"
+			&:nth-of-type(5):before
+				content: "Empresa"
+	.carrito
+		td
+			&:nth-of-type(1):before
+				content: "SKU / Talla / Producto / Color"
+			&:nth-of-type(2):before
+				content: "Precio"
+			&:nth-of-type(3):before
+				content: "Cantidad"
+			&:nth-of-type(4):before
+				content: "Subtotal"
+	.checkout
+		td
+			&:nth-of-type(1):before
+				content: "SKU / Talla / Producto / Color"
+			&:nth-of-type(2):before
+				content: "Precio"
+			&:nth-of-type(3):before
+				content: "Cantidad"
+			&:nth-of-type(4):before
+				content: "Subtotal"
+	.pedidos
+		td
+			&:nth-of-type(1):before
+				content: "Número de pedido"
+			&:nth-of-type(2):before
+				content: "Usuario"
+			&:nth-of-type(3):before
+				content: "Cantidad"
+			&:nth-of-type(4):before
+				content: "Paquetería"
+			&:nth-of-type(5):before
+				content: "Guía"
+			&:nth-of-type(6):before
+				content: "Monto total"
+			&:nth-of-type(7):before
+				content: "Status transacción"
+			&:nth-of-type(8):before
+				content: "Estado actual"
+			&:nth-of-type(9):before
+				content: "Fecha"
+
+
+
+//***********************************************************************
+//***********************************************************************
+// Cartas de los productos
+//***********************************************************************
+//***********************************************************************
+.productos-container
+	background-color: #eaebec
+	width: 100%
+	height: auto
+	padding: 50px 0px
+
+.product-card
+	transform-style: preserve-3d
+	margin: 20px 0px
+	width: 100%
+	height: 400px
+	overflow: hidden
+	position: relative
+	background-color: #fff
+	border-radius: 3px
+	@extend .t100ms;
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	.product-image-overlay
+		position: absolute
+		top: 0px
+		left : 0px
+		width: 100%
+		height: 100%
+		background-color: $vital
+		opacity: 0
+	.product-details
+		position: absolute
+		top: 80px
+		left: 50%
+		margin-left: -85px
+		border: 2px solid white
+		a
+			font-weight: 700
+			color: white
+			font-size: 19px
+			text-transform: uppercase
+			text-decoration: none
+		text-align: center
+		padding: 10px 0px
+		width: 170px
+		opacity: 0
+		@extend .t100ms;
+	.product-add-cart
+		position: absolute
+		right: 0px
+		bottom: 0px
+		color: white
+		opacity: 0
+		width: 65px
+		height: 65px
+		background-color: $vital
+		clip-path: polygon(0% 100% , 100% 0% , 100% 100%)
+		z-index: 10
+		cursor: pointer
+		@extend .t100ms;
+		i
+			position: absolute
+			right: 5px
+			top: 25px
+			font-size: 20px
+			color: white
+			z-index: 11
+	.product-stats
+		background-color: white
+		position: absolute
+		bottom: 0px
+		left: 0px
+		width: 100%
+		height: 100px
+		padding: 20px
+		@extend .t200ms;
+		.product-name
+			font-size: 20px
+			color: $black
+			margin: 0px
+			padding: 0px
+			text-overflow: ellipsis
+			text-overflow-multiline: ellipsis
+			overflow: hidden
+			white-space: nowrap
+		.product-subtitle
+			font-size: 16px
+			color: $text
+			padding: 2px 0px 20px 0px
+			@extend .t200ms;
+		.product-price
+			float: right
+			color: $vital
+			font-size: 20px
+			font-weight: 600
+		.product-options
+			padding: 2px 0px
+			.product-sizes
+				font-size: 16px
+				color: $text
+				input[type="radio"]
+					display: none
+					&:checked + label
+						color: $vital
+						font-weight: bold
+				label
+					cursor: pointer
+			.product-colors
+				font-weight: 700
+				font-size: 13px
+				text-transform: uppercase
+			.product-colors-list
+				margin: 0px
+				padding: 0px
+				list-style: none
+				li
+					float: left
+					width: 18px
+					height: 18px
+					margin: 0px 3px
+					border: 1px solid transparentize($text, .8)
+					border-radius: 100%
+					background-color: red
+					@extend .t200ms;
+				li:nth-child(1)
+					margin-left: 0px
+				.naranja
+					background-color: $vital
+					&:hover
+						background-color: lighten($vital, 10)
+				.rojo
+					background-color: #e74c3c
+					&:hover
+						background-color: lighten(#e74c3c, 10)
+				.verde
+					background-color: #27ae60
+					&:hover
+						background-color: lighten(#27ae60, 10)
+	&:hover, &:focus
+		box-shadow: 0px 13px 21px -5px rgba(0, 0, 0, 0.3)
+		.product-image-overlay
+			opacity: 0.9
+		.product-details
+			opacity: 1
+			width: 150px
+			font-size: 15px
+			margin-left: -75px
+			top: 95px
+			cursor: pointer
+		.product-add-cart
+			width: 50px
+			height: 50px
+			opacity: 1
+		.product-stats
+			height: 180px
+			.product-subtitle
+				padding: 0px
+
+
+//***********************************************************************
+//***********************************************************************
+// Modal productos => AJAX
+//***********************************************************************
+//***********************************************************************
+.modal-imagen
+	overflow: hidden
+	img
+		width: 100%
+		border-radius: 3px
+		border: 1px solid transparentize($text, .6)
+
+.disp-none
+	color: $error
+	i
+		color: $error
+.disp-low
+	color: $warning
+	i
+		color: $warning
+.disp-good
+	color: $success
+	i
+		color: $success
+//***********************************************************************
+//***********************************************************************
+// PEDIDOS / BUSQUEDA DE PEDIDOS
+//***********************************************************************
+//***********************************************************************
+
+.buscarPedidoContainer
+	height: 80vh
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@extend .t200ms;
+	.buscarPedidoFormulario
+		text-align: center
+		min-width: 100%
+		background-color: transparentize(white, .1)
+		padding: 50px
+		border-radius: 5px
+		border: 1px solid lighten($text, 25)
+		-webkit-box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+		box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+		h1
+			font-weight: bold
+			color: $vital
+		input
+			text-align: center
+			width: 50%
+			display: block
+			margin: 5px auto
+			font-size: 24px
+			padding: 5px 15px
+.resultadosPedidosBusqueda
+	text-align: center
+	min-width: 100%
+	background-color: transparentize(white, .1)
+	padding: 50px
+	border-radius: 5px
+	border: 1px solid lighten($text, 25)
+	-webkit-box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+	box-shadow: 0px 3px 6px transparentize(black, .9) , 0px 3px 6px transparentize(black, .8)
+	opacity: 0
+	@extend .t200ms;
+
+.mostrarResultados
+	opacity: 1
+
+.busqueda-container-img
+	width: 100%
+	height: 100vh
+	background-image: url("../images/search-pedidos.jpg")
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+
+
+
+//***********************************************************************
+//***********************************************************************
+// Estilos de carrito de compras
+//***********************************************************************
+//***********************************************************************
+.carritoBoton
+	background-color: $vital !important
+	position: relative
+	cursor: pointer
+	@extend .t100ms;
+	&:hover
+		background-color: lighten($vital, 5) !important
+		.carritoItems
+			&:after
+				content: 'Ver carrito'
+				font-size: 16px
+				left: -95px
+				opacity: 1
+
+	.carritoIcono
+		font-size: 20px
+	.carritoItems
+		display: inline-block
+		margin-left: 5px
+		font-size: 16px
+		font-weight: 600
+		color: white
+		&:after
+			content: 'Ver carrito'
+			margin-left: 5px
+			position: absolute
+			color: $text
+			font-size: 18px
+			font-weight: 500
+			top: 5px
+			left: -125px
+			opacity: 0
+			@extend .t200ms;
+
+
+.table, .checkout
+	tbody
+		tr
+			td
+				vertical-align: middle
+				img
+					width: 80px
+					float: left
+					border-radius: 50%
+					margin: 10px
+				ul
+					margin: 18px 0px 0px 0px
+					padding: 0px
+					list-style: none
+					display: block
+					li
+						display: block
+					li:nth-child(1)
+						font-weight: bold
+						text-transform: uppercase
+						font-size: 12px
+						color: $text
+					li:nth-child(2)
+						color: $black
+						text-overflow: ellipsis
+						text-overflow-multiline: ellipsis
+						overflow: hidden
+						white-space: nowrap
+						.carritoTalla
+							color: $text
+					li:nth-child(3)
+						font-size: 14px
+						font-weight: lighter
+						color: $text
+.carritoTotal
+	font-weight: bold
+	font-size: 20px
+	&~td
+		background-color: #eaebec
+
+.product-remove-cart
+	font-size: 14px
+	color: $error
+	@extend .t100ms;
+	&:hover
+		text-decoration: underline
+		color: lighten($error, 5)
+
+
+.carrito-preview
+	position: fixed
+	width: 600px
+	height: 45px
+	padding: 20px 30px
+	background-color: $vital
+	border-radius: 0px 3px 3px 0px
+	border: 1px solid lighten($text, 35)
+	overflow-y: hidden
+	top: 200px
+	left: -30%
+	@extend .t200ms;
+	z-index: 99
+	#carrito
+		opacity: 0
+		@extend .t200ms;
+	.carrito-preview-boton
+		position: absolute
+		right: 0px
+		top: 10px
+		background-color: transparent
+		border: none
+		cursor: pointer
+		i
+			font-size: 24px
+			color: white
+			@extend .t200ms;
+
+.carrito-preview-animate
+	overflow-y: scroll
+	background-color: white
+	height: 600px
+	left: 0px
+	#carrito
+		opacity: 1
+	.carrito-preview-boton
+		i
+			color: lighten($black, 45)
+		&:hover
+			i
+				color: $black
+
+
+#carritoPaymentBoton, .btn-mercado
+	width: 100%
+	cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

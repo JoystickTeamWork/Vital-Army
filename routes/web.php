@@ -76,3 +76,32 @@ Route::post('/pedidos/insert', [
 	'as' => 'pedidos.insert',
 ]);
 
+
+
+
+/*
+/
+/ Procesar formulario y agregar un producto al carrito de compras
+/
+*/
+
+Route::post('/carrito/agregar', [
+	'uses' => 'PedidosController@agregarProductoCarrito',
+	'as' => 'carrito.agregar',
+]);
+
+
+
+/*
+/
+/ Borrar un producto del carrito
+/
+*/
+
+Route::get('/carrito/borrar/{id}', [
+	'uses' => 'PedidosController@BorrarProductoCarrito',
+	'as' => 'carrito.borrar',
+]);
+
+
+Auth::routes();
